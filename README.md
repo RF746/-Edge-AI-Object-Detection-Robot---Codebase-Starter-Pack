@@ -43,7 +43,49 @@ This project uses a **Raspberry Pi** (or Jetson Nano) as the primary processing 
 - Power supply (battery pack or 5V wall adapter)
 - Jumper wires, breadboard or custom PCB
 
+
+---
 ---
 
+## ⚙️ Setup Instructions
+
+### 📷 Raspberry Pi / Jetson Setup
+
+1. **Install dependencies:**
+   ```bash
+   sudo apt update
+   sudo apt install python3-pip
+   pip install -r requirements.txt
+Run object detection:
+
+bash
+Copy code
+python3 object_detection.py
+Optional: Connect Pi’s TX → Arduino RX, and GND → GND for UART.
+
+⚙️ Arduino Firmware Upload
+Open motor_controller.ino in the Arduino IDE.
+
+Upload to your board (e.g., Arduino Uno or RP2040).
+
+Verify the motor driver is wired correctly to pins 5, 6, and 9.
+
+📺 Demo
+<div align="center"> <img src="images/wiring_diagram.png" width="400" alt="Wiring Diagram"> <br> <b>Wiring Diagram</b> </div>
+🎥 Demo video coming soon — check out media/demo_video.mp4 (or YouTube link if uploaded).
+
+🚀 Future Enhancements
+Add PID control for smoother movement
+
+Integrate ultrasonic sensor for obstacle detection
+
+Add BLE or Wi-Fi telemetry
+
+Upgrade model to support custom classes or multi-object tracking
+
+Integrate with ROS2 for scalable robot stack
+
+🧑‍💻 Credits
+Built by Ryan Faxigue as part of a passion for embedded AI, robotics, and hardware acceleration.
 ## 🧾 File Structure
 
